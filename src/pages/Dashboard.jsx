@@ -12,9 +12,12 @@ import { useNavigate } from "react-router-dom";
 const Dashboard = () => {
   const { login } = useLoginContext();
   const navigate = useNavigate();
-  if (!login) {
-    navigate("/login");
-  }
+  useEffect(() => {
+    if (!login) {
+      navigate("/login");
+    }
+  });
+
   return (
     login && (
       <div className="flex ">

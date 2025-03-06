@@ -1,12 +1,11 @@
 import "./App.css";
 import { LoginContextProvider, useLoginContext } from "./context/LoginContext";
-import { Outlet } from "react-router-dom";
+import MainLayout from "./pages/MainLayout";
 
 function App() {
-
   return (
     <LoginContextProvider>
-      <Outlet />
+      <MainLayout />
     </LoginContextProvider>
   );
 }
